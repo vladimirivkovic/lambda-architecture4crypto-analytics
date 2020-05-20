@@ -31,13 +31,15 @@ def connect_to_kafka():
 
 
 def handle_event(event, kafka_producer):
-    for _ in range(3):
+    for _ in range(5):
         try:
             block = w3.eth.getBlock(event)
             break
         except:
             print("getBlock error")
             time.sleep(1)
+    else:
+        return
 
     block_dict = dict(block)
     block_json = json.dumps(block_dict, cls=HexJsonEncoder)
