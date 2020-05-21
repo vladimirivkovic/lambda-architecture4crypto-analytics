@@ -94,6 +94,12 @@ services:
     volumes: 
       - ./stream-processing:/home/stream-processing
     command: "/home/stream-processing/run.sh"
+  
+  metabase:
+    image: metabase/metabase
+    container_name: metabase
+    ports: 
+      - 3000:3000
 
 volumes: 
   bitcoin_data:
