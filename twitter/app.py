@@ -68,7 +68,11 @@ def main():
     auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
     twitterStream = tweepy.Stream(auth, Listener())
-    twitterStream.filter(track=["bitcoin"])
+    while True:
+        try:
+            twitterStream.filter(track=["bitcoin"])
+        except:
+            time.sleep(5)
 
 
 if __name__ == "__main__":

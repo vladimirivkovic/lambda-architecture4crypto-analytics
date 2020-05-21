@@ -52,7 +52,18 @@ services:
       KAFKA_BROKER: "kafka1:19092,kafka2:19092,kafka3:19092"
     depends_on:
       - kafka1
-  
+
+  reddit-producer:
+    build: ./reddit
+    container_name: reddit-producer
+    env_file: 
+      - ./reddit/auth.env
+    environment: 
+      KAFKA_BROKER: "kafka1:19092,kafka2:19092,kafka3:19092"
+      SUBREDDIT: bitcoin
+    depends_on:
+      - kafka1
+
   btc-consumer:
     build: ./basic-consumer
     container_name: btc-consumer
