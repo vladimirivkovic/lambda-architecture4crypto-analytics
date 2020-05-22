@@ -15,6 +15,8 @@ API_SECRET_KEY = os.environ["API_SECRET_KEY"]
 ACCESS_TOKEN = os.environ["ACCESS_TOKEN"]
 ACCESS_TOKEN_SECRET = os.environ["ACCESS_TOKEN_SECRET"]
 
+TRACKS = os.environ["TRACKS"].split(",")  # ["bitcoin", "ethereum"]
+
 producer = None
 
 
@@ -31,27 +33,13 @@ def connect_to_kafka():
 
 class Listener(tweepy.StreamListener):
 
+    def __init__(self, track):
+        self.track = track
+
     def on_data(self, data):
         t = json.loads(data)
-        producer.send(TOPIC, key=bytes(
+        producer.send(f"{TOPIC}-{self.track}", key=bytes(
             str(t["id"]), "utf-8"), value=bytes(data, "utf-8"))
-        #
-        # print("\n\n\n")
-        # print(t["created_at"])
-        # print(t["id"])
-        # print(t["in_reply_to_status_id"])
-        # print(t["in_reply_to_user_id"])
-        # print(t["in_reply_to_screen_name"])
-        # print(t["user"]["id"])
-        # print(t["user"]["screen_name"])
-        # print(t["user"]["followers_count"])
-        # print(t["is_quote_status"])
-        # print(t["quote_count"])
-        # print(t["reply_count"])
-        # print(t["retweet_count"])
-        # print(t["favorite_count"])
-        # print(t["entities"]["hashtags"])
-        # print(t["lang"])
         return True
 
     def on_error(self, status):
@@ -67,12 +55,9 @@ def main():
     auth = tweepy.OAuthHandler(API_KEY, API_SECRET_KEY)
     auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
-    twitterStream = tweepy.Stream(auth, Listener())
-    while True:
-        try:
-            twitterStream.filter(track=["bitcoin"])
-        except:
-            time.sleep(5)
+    for t in TRACKS:
+        twitterStream = tweepy.Stream(auth, Listener(t))
+        twitterStream.filter(track=[t], is_async=True)
 
 
 if __name__ == "__main__":

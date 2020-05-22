@@ -50,6 +50,7 @@ services:
       - ./twitter/auth.env
     environment: 
       KAFKA_BROKER: "kafka1:19092,kafka2:19092,kafka3:19092"
+      TRACKS: bitcoin,ethereum
     depends_on:
       - kafka1
 
@@ -60,7 +61,7 @@ services:
       - ./reddit/auth.env
     environment: 
       KAFKA_BROKER: "kafka1:19092,kafka2:19092,kafka3:19092"
-      SUBREDDIT: bitcoin
+      SUBREDDITS: bitcoin,ethereum
     depends_on:
       - kafka1
 

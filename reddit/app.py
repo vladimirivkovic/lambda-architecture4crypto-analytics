@@ -7,10 +7,10 @@ import json
 from kafka import KafkaProducer
 import kafka.errors
 
-SUBREDDIT = os.environ["SUBREDDIT"]
+SUBREDDITS = os.environ["SUBREDDITS"].split(",")
 
 KAFKA_BROKER = os.environ["KAFKA_BROKER"]
-TOPIC = "subreddit-" + SUBREDDIT
+TOPIC = "subreddit"
 START_DELAY = 30
 
 CLIENT_ID = os.environ["CLIENT_ID"]
@@ -47,11 +47,12 @@ def main():
                          client_secret=CLIENT_SECRET,
                          user_agent='my user agent')
 
-    subreddit = reddit.subreddit(SUBREDDIT)
+    subreddit = reddit.subreddit("+".join(SUBREDDITS))
 
     for comment in subreddit.stream.comments():
         comment_dict = get_dict(comment)
-        producer.send(TOPIC, key=bytes(comment.id, "utf-8"),
+        print(comment.subreddit)
+        producer.send(f"{TOPIC}-{comment.subreddit}", key=bytes(comment.id, "utf-8"),
                       value=bytes(json.dumps(comment_dict), "utf-8"))
 
 
