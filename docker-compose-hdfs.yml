@@ -42,7 +42,7 @@ services:
     ports:
       - "8888:8888"
     volumes:
-      - ./conf.dist:/usr/share/hue/desktop/conf
+      - ./hue/conf.dist:/usr/share/hue/desktop/conf
     depends_on: 
       - namenode
 
