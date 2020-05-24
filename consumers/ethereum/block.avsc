@@ -1,0 +1,27 @@
+{
+    "doc": "Ethereum blocks",
+    "name": "ethereum-blocks",
+    "type": "record",
+    "fields": [
+        {"name": "difficulty", "type": "double"},
+        {"name": "extraData", "type": "string"},
+        {"name": "gasLimit", "type": "long"},
+        {"name": "gasUsed", "type": "long"},
+        {"name": "hash", "type": "string"},
+        {"name": "logsBloom", "type": "string"},
+        {"name": "miner", "type": "string"},
+        {"name": "mixHash", "type": "string"},
+        {"name": "nonce", "type": "string"},
+        {"name": "number", "type": "long"},
+        {"name": "parentHash", "type": "string"},
+        {"name": "receiptsRoot", "type": "string"},
+        {"name": "sha3Uncles", "type": "string"},
+        {"name": "size", "type": "long"},
+        {"name": "stateRoot", "type": "string"},
+        {"name": "timestamp", "type": "long"},
+        {"name": "totalDifficulty", "type": "double"},
+        {"name": "transactions", "type" : {"type": "array", "items": "string"}},
+        {"name": "transactionsRoot", "type": "string"},
+        {"name": "uncles", "type" : {"type": "array", "items": "string"}}
+    ]
+}

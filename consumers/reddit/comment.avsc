@@ -1,0 +1,15 @@
+{
+    "doc": "Reddit comments",
+    "name": "reddit-comments",
+    "type": "record",
+    "fields": [
+        {"name": "id", "type": "string", "default": ""},
+        {"name": "author", "type": "string", "default": ""},
+        {"name": "timestamp", "type": "double", "default": 0},
+        {"name": "parrent_id", "type": "string", "default": ""},
+        {"name": "replies", "type": "long", "default": 0},
+        {"name": "score", "type": "long", "default": 0},
+        {"name": "permalink", "type": "string", "default": ""},
+        {"name": "body", "type": "string", "default": ""}
+    ]
+}

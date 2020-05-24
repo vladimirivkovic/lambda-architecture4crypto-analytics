@@ -75,28 +75,6 @@ services:
     depends_on:
       - kafka1
 
-  btc-consumer:
-    build: ./consumers
-    container_name: btc-consumer
-    command: "bitcoin/app.py"
-    environment:
-      HDFS_HOST: "http://namenode:9870"
-      KAFKA_BROKER: "kafka1:19092,kafka2:19092,kafka3:19092"
-    depends_on: 
-      - btc-producer
-      - namenode
-
-  eth-consumer:
-    build: ./consumers
-    container_name: eth-consumer
-    command: "ethereum/app.py"
-    environment:
-      HDFS_HOST: "http://namenode:9870"
-      KAFKA_BROKER: "kafka1:19092,kafka2:19092,kafka3:19092"
-    depends_on: 
-      - eth-producer
-      - namenode
-
   stream-processor:
     image: maven:3.6.3-jdk-8-openj9
     container_name: stream-processor

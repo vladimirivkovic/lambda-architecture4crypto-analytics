@@ -1,0 +1,25 @@
+{
+    "doc": "Bitcoin blocks",
+    "name": "bitcoin-blocks",
+    "type": "record",
+    "fields": [
+        {"name": "hash", "type": "string", "default": ""},
+        {"name": "confirmations", "type": "int", "default": 0},
+        {"name": "strippedsize", "type": "long", "default": 0},
+        {"name": "size", "type": "long", "default": 0},
+        {"name": "weight", "type": "long", "default": 0},
+        {"name": "height", "type": "long", "default": 0},
+        {"name": "version", "type": "long", "default": 0},
+        {"name": "versionHex", "type": "string", "default": ""},
+        {"name": "merkleroot", "type": "string", "default": ""},
+        {"name": "tx", "type" : {"type": "array", "items": "string"}},
+        {"name": "time", "type": "long", "default": 0},
+        {"name": "mediantime", "type": "long", "default": 0},
+        {"name": "nonce", "type": "long", "default": 0},
+        {"name": "bits", "type": "string", "default": ""},
+        {"name": "difficulty", "type": "double", "default": 0},
+        {"name": "chainwork", "type": "string", "default": ""},
+        {"name": "nTx", "type": "int", "default": 0},
+        {"name": "previousblockhash", "type": "string", "default": ""}
+    ]
+}
