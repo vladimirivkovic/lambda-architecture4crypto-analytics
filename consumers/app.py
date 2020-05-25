@@ -42,7 +42,7 @@ def connect_to_hdfs():
 def upload_to_hdfs(hdfs, records):
     global first
     print('saving to AVRO ...')
-    # print(records)
+    print(records)
 
     with AvroWriter(hdfs, f'{BASE_DIR}{FILE_NAME}', schema=parsed_schema, append=not first) as writer:
         for record in records:

@@ -7,7 +7,7 @@
         {"name": "MARKET", "type": "string", "default": ""},
         {"name": "FROMSYMBOL", "type": "string", "default": ""},
         {"name": "TOSYMBOL", "type": "string", "default": ""},
-        // {"name": "FLAGS", "type": "int", "default": 0},
+        {"name": "FLAGS", "type": "int", "default": 0},
         {"name": "PRICE", "type": "double", "default": 0},
         {"name": "LASTUPDATE", "type": "long", "default": 0},
         {"name": "MEDIAN", "type": "double", "default": 0},
