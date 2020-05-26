@@ -1,7 +1,13 @@
-import spark.implicits._
+import org.apache.spark.sql.SparkSession
 
-val path = "hdfs://namenode:9000/user/data/ethereum/blocks-*.json"
-val blocksDF = spark.read.json(path)
+// For implicit conversions like converting RDDs to DataFrames
+import spark.implicits._
+import org.apache.spark.sql.avro._
+
+// val spark = SparkSession.builder().appName("Gas average example").getOrCreate()
+
+val path = "hdfs://namenode:9000/user/data/eth-block/data.avro"
+val blocksDF = spark.read.format("avro").load(path)
 
 blocksDF.printSchema()
 
