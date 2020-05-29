@@ -23,7 +23,7 @@ services:
       HDFS_HOST: "http://namenode:9870"
       KAFKA_BROKER: "kafka1:19092,kafka2:19092,kafka3:19092"
       TOPIC: "eth-block"
-      MAX_RECORDS: 5
+      MAX_RECORDS: 20
       SCHEMA_FILE: "ethereum/block.avsc"
     depends_on: 
       - eth-producer
@@ -37,7 +37,7 @@ services:
       HDFS_HOST: "http://namenode:9870"
       KAFKA_BROKER: "kafka1:19092,kafka2:19092,kafka3:19092"
       TOPIC: "exchange-rates"
-      MAX_RECORDS: 20
+      MAX_RECORDS: 200
       SCHEMA_FILE: "exchange-rate/record.avsc"
     depends_on: 
       - exchange-rate-producer
@@ -51,7 +51,7 @@ services:
       HDFS_HOST: "http://namenode:9870"
       KAFKA_BROKER: "kafka1:19092,kafka2:19092,kafka3:19092"
       TOPIC: "subreddit-Bitcoin"
-      MAX_RECORDS: 20
+      MAX_RECORDS: 25
       SCHEMA_FILE: "reddit/comment.avsc"
     depends_on: 
       - reddit-producer
@@ -65,7 +65,7 @@ services:
       HDFS_HOST: "http://namenode:9870"
       KAFKA_BROKER: "kafka1:19092,kafka2:19092,kafka3:19092"
       TOPIC: "subreddit-ethereum"
-      MAX_RECORDS: 20
+      MAX_RECORDS: 25
       SCHEMA_FILE: "reddit/comment.avsc"
     depends_on: 
       - reddit-producer

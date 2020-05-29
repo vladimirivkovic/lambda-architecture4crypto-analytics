@@ -13,12 +13,10 @@ TOPIC = os.environ['TOPIC']
 MAX_RECORDS = int(os.environ['MAX_RECORDS'])
 BASE_DIR = f'/user/data/{TOPIC}/'
 SCHEMA_FILE = os.environ['SCHEMA_FILE']
-FILE_NAME = 'data.avro'
+FILE_NAME = 'data'
 
 START_DELAY = 60
 SLEEP_INTERVAL = 3
-
-first = True
 
 with open(SCHEMA_FILE) as schema_file:
     schema = json.load(schema_file)
@@ -42,11 +40,14 @@ def connect_to_hdfs():
 def upload_to_hdfs(hdfs, records):
     global first
     print('saving to AVRO ...')
-    print(records)
+    # print(records)
 
-    with AvroWriter(hdfs, f'{BASE_DIR}{FILE_NAME}', schema=parsed_schema, append=not first) as writer:
+    with AvroWriter(hdfs, f'{BASE_DIR}{FILE_NAME}-{round(time.time())}.avro', schema=parsed_schema) as writer:
         for record in records:
-            writer.write(record)
+            try:
+                writer.write(record)
+            except:
+                continue
     first = False
 
 
@@ -81,12 +82,6 @@ def connect_to_kafka():
             time.sleep(SLEEP_INTERVAL)
 
 
-def check_file(hdfs):
-    global first
-
-    first = hdfs.status(f'{BASE_DIR}{FILE_NAME}', strict=False) == None
-
-
 if __name__ == '__main__':
     time.sleep(START_DELAY)
     print(f'Starting {TOPIC} consumer ...')
@@ -96,8 +91,6 @@ if __name__ == '__main__':
         hdfs.makedirs(BASE_DIR)
     except:
         pass
-
-    check_file(hdfs)
 
     consumer = connect_to_kafka()
     consume(hdfs, consumer)
