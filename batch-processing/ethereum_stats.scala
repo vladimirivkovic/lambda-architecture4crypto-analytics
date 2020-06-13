@@ -13,7 +13,7 @@ blocksDF.printSchema()
 
 blocksDF.createOrReplaceTempView("blocks")
 
-spark.sql("SELECT AVG(gasUsed) FROM blocks").sho
+spark.sql("SELECT AVG(gasUsed) FROM blocks").show
 
 spark.sql("SELECT COUNT(*) FROM blocks").show
 
