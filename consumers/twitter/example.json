@@ -1,0 +1,230 @@
+{
+    "topic": "tweets-ethereum",
+    "key": 1264390041872117800,
+    "value": {
+        "created_at": "Sun May 24 02:57:31 +0000 2020",
+        "id": 1264390041872117800,
+        "id_str": "1264390041872117760",
+        "text": "RT @AVALabsJapan: Athereumとは？ 🤔\n\n多くの追加機能を備える超高速かつスケーラブルなイーサリアムの理想型をAVAにより実現した究極の形態です。\n\n是非ご一読を🧐\nhttps://t.co/9Qk5Js3Pzp\n\n#AVA #ethereum #ath…",
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 1100343144724410400,
+            "id_str": "1100343144724410369",
+            "name": "サムライミJapan",
+            "screen_name": "samraichain",
+            "location": null,
+            "url": null,
+            "description": null,
+            "translator_type": "none",
+            "protected": false,
+            "verified": false,
+            "followers_count": 631,
+            "friends_count": 928,
+            "listed_count": 1,
+            "favourites_count": 461,
+            "statuses_count": 334,
+            "created_at": "Tue Feb 26 10:33:43 +0000 2019",
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "F5F8FA",
+            "profile_background_image_url": "",
+            "profile_background_image_url_https": "",
+            "profile_background_tile": false,
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1261774822121418752/KnxTT1pH_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1261774822121418752/KnxTT1pH_normal.jpg",
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": null,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweeted_status": {
+            "created_at": "Wed Apr 15 11:24:24 +0000 2020",
+            "id": 1250384472974823400,
+            "id_str": "1250384472974823426",
+            "text": "Athereumとは？ 🤔\n\n多くの追加機能を備える超高速かつスケーラブルなイーサリアムの理想型をAVAにより実現した究極の形態です。\n\n是非ご一読を🧐\nhttps://t.co/9Qk5Js3Pzp\n\n#AVA #ethereum #athereum $AVA",
+            "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 1189879401640382500,
+                "id_str": "1189879401640382466",
+                "name": "AVA Japan Unofficial | The Internet of Finance",
+                "screen_name": "AVALabsJapan",
+                "location": "日本",
+                "url": "https://www.avalabs.org/",
+                "description": "AVA日本非公式アカウント。AVAは、AVA Labsによって構築されているプラットフォームであり、高いパフォーマンス、スケーラブル、分散性を実現。多様なデジタル資産の発行、使用、取引を可能にする独自サブネットワークの活用により、次世代の金融ネットワークを構築する事を目的としています。",
+                "translator_type": "none",
+                "protected": false,
+                "verified": false,
+                "followers_count": 365,
+                "friends_count": 100,
+                "listed_count": 0,
+                "favourites_count": 320,
+                "statuses_count": 56,
+                "created_at": "Thu Oct 31 12:19:00 +0000 2019",
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "profile_background_color": "F5F8FA",
+                "profile_background_image_url": "",
+                "profile_background_image_url_https": "",
+                "profile_background_tile": false,
+                "profile_link_color": "1DA1F2",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/1248953817309171712/01tybTW-_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/1248953817309171712/01tybTW-_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/1189879401640382466/1586608770",
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "quote_count": 0,
+            "reply_count": 0,
+            "retweet_count": 2,
+            "favorite_count": 4,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "AVA",
+                        "indices": [
+                            102,
+                            106
+                        ]
+                    },
+                    {
+                        "text": "ethereum",
+                        "indices": [
+                            107,
+                            116
+                        ]
+                    },
+                    {
+                        "text": "athereum",
+                        "indices": [
+                            117,
+                            126
+                        ]
+                    }
+                ],
+                "urls": [
+                    {
+                        "url": "https://t.co/9Qk5Js3Pzp",
+                        "expanded_url": "https://link.medium.com/9rkFmzEzH5",
+                        "display_url": "link.medium.com/9rkFmzEzH5",
+                        "indices": [
+                            77,
+                            100
+                        ]
+                    }
+                ],
+                "user_mentions": [],
+                "symbols": [
+                    {
+                        "text": "AVA",
+                        "indices": [
+                            127,
+                            131
+                        ]
+                    }
+                ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false,
+            "filter_level": "low",
+            "lang": "ja"
+        },
+        "is_quote_status": false,
+        "quote_count": 0,
+        "reply_count": 0,
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "entities": {
+            "hashtags": [
+                {
+                    "text": "AVA",
+                    "indices": [
+                        120,
+                        124
+                    ]
+                },
+                {
+                    "text": "ethereum",
+                    "indices": [
+                        125,
+                        134
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https://t.co/9Qk5Js3Pzp",
+                    "expanded_url": "https://link.medium.com/9rkFmzEzH5",
+                    "display_url": "link.medium.com/9rkFmzEzH5",
+                    "indices": [
+                        95,
+                        118
+                    ]
+                }
+            ],
+            "user_mentions": [
+                {
+                    "screen_name": "AVALabsJapan",
+                    "name": "AVA Japan Unofficial | The Internet of Finance",
+                    "id": 1189879401640382500,
+                    "id_str": "1189879401640382466",
+                    "indices": [
+                        3,
+                        16
+                    ]
+                }
+            ],
+            "symbols": []
+        },
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "filter_level": "low",
+        "lang": "ja",
+        "timestamp_ms": "1590289051870"
+    },
+    "partition": 0,
+    "offset": 0
+}

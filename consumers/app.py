@@ -38,7 +38,6 @@ def connect_to_hdfs():
 
 
 def upload_to_hdfs(hdfs, records):
-    global first
     print('saving to AVRO ...')
     # print(records)
 
@@ -48,7 +47,7 @@ def upload_to_hdfs(hdfs, records):
                 writer.write(record)
             except:
                 continue
-    first = False
+    time.sleep(1)
 
 
 def handle_msg(msg, records):

@@ -8,13 +8,16 @@ import org.apache.spark.sql.avro._
 
 val path = "hdfs://namenode:9000/user/data/eth-block/"
 val blocksDF = spark.read.format("avro").load(path)
-
 // blocksDF.printSchema()
 
 val ratesPath = "hdfs://namenode:9000/user/data/exchange-rates/"
 val ratesDF = spark.read.format("avro").load(ratesPath)
-
 // ratesDF.printSchema()
+
+val redditPath = "hdfs://namenode:9000/user/data/subreddit-ethereum/"
+val redditDF = spark.read.format("avro").load(redditPath)
+// redditDF.printSchema()
+
 val filteredRatesDF = ratesDF.select("*").filter($"PRICE" > 0).filter($"LASTUPDATE" > 0)
 filteredRatesDF.createOrReplaceTempView("rates")
 
@@ -30,7 +33,7 @@ spark.sql("SELECT hash, to_timestamp(timestamp), avg(PRICE) FROM blocks JOIN rat
           "ON bround(timestamp/60, 0) == bround(LASTUPDATE/60, 0) " + 
           "WHERE FROMSYMBOL == 'ETH' GROUP BY hash, timestamp ORDER BY timestamp").show
 
-//.select("hash", to_timestamp($"timestamp"), "avg_price")
+/*
 filteredRatesDF
     .filter($"FROMSYMBOL" === "ETH")
     .join(blocksDF, bround($"LASTUPDATE"/60) === bround($"timestamp"/60))
@@ -38,3 +41,4 @@ filteredRatesDF
     .agg(avg($"PRICE").alias("avg_price"))
     .orderBy("timestamp")
     .show
+*/

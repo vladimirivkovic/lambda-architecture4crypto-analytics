@@ -1,0 +1,15 @@
+{
+    "doc": "Reddit comments",
+    "name": "reddit-comments",
+    "type": "record",
+    "fields": [
+        {"name": "id", "type": "string"},
+        {"name": "author", "type": "string"},
+        {"name": "timestamp", "type": "double"},
+        {"name": "parrent_id", "type": "string"},
+        {"name": "replies", "type": "long"},
+        {"name": "score", "type": "long"},
+        {"name": "permalink", "type": "string"},
+        {"name": "body", "type": "string"}
+    ]
+}
